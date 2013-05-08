@@ -1,9 +1,14 @@
 <?xml version="1.0"?>
-
 <xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:import href="hilbert.xslt" /> <!-- import l-rule set here-->
 	<xsl:output method="xml" indent="yes" standalone="no" doctype-public="-//W3C//DTD SVG 1.1//EN" doctype-system="http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" media-type="image/svg" />
 	<xsl:param name="n" select="5"/>
+	<xsl:param name="x" select="512"/>
+	<xsl:param name="y" select="512"/>
+	<xsl:param name="width" select="1024"/>
+	<xsl:param name="height" select="1024"/>
+	<xsl:param name="direction" select="1"/>
+	<xsl:param name="step" select="20"/>
 
 	<xsl:template name="main"> <!--controls the workflow to generate svg-->
 		<xsl:variable name="initial">
@@ -18,13 +23,17 @@
 		<xsl:variable name="points"> <!--generate points from result string-->
 		        <xsl:value-of select="concat($x,',', $y, ' ')"/>
 			<xsl:apply-templates select="($result-string/*)[1]" mode="scan">
-				<xsl:with-param name="direction" select="1"/>
-				<xsl:with-param name="point"><x>512</x><y>512</y></xsl:with-param>
+				<xsl:with-param name="direction" select="$direction"/>
+				<xsl:with-param name="point">
+				     <x><xsl:value-of select="$x"/></x><y><xsl:value-of select="$y"/></y>
+				</xsl:with-param>
 			</xsl:apply-templates>
 		</xsl:variable>
 
 		<!--write svg file-->
-		<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" >
+		<svg xmlns="http://www.w3.org/2000/svg">
+		        <xsl:attribute name="width" select="$width"/>
+			<xsl:attribute name="height" select="$height"/>
 			<polyline fill = "none" stroke = "black" stroke-width = "3">
 				<xsl:attribute name="points" select="$points"/>
 			</polyline>
@@ -66,7 +75,6 @@
 		<xsl:param name="direction"/>
 		<xsl:param name="point"/>
 		
-		<xsl:variable name="step" select="10"/>
 		<xsl:variable name="new-point">
 			<x>
 				<xsl:value-of select="if (number($direction)=3) then $point/x - $step
