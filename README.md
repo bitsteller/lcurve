@@ -39,8 +39,8 @@ Note: All of these options, except the first can be omitted. If omitted, the def
 * dragon.xslt - draws the dragon curve
 
 ## Supported drawing commands in L-Rule sets
-* <code>&\lt;r/&\gt;</code> turns the current direction 90° to the right
-* <code>&\lt;l/&\gt;</code> turns the current direction 90° to the left
-* <code>&\lt;f/&\gt;</code> draws a line in the current direction with one step length
+* <code>&lt;r/&gt;</code> turns the current direction 90° to the right
+* <code>&lt;l/&gt;</code> turns the current direction 90° to the left
+* <code>&lt;f/&gt;</code> draws a line in the current direction with one step length
 
 All other tags in l-rules are interpreted as variables (or constants).
