@@ -12,9 +12,9 @@ This XSLT script generates SVG files for a given Lindenmayer-System.
 
 1. Open the file lcurve.xslt and in line 3, which states
 
-<code>&lt;xsl:import href="hilbert.xslt" /&gt; &lt;!-- import l-rule set here--&gt;
+<code>&lt;xsl:import href="hilbert.xslt" /&gt; &lt;!-- import l-rule set here--&gt;</code>
 
-change "hilbert.xslt" to the l-rule set you want to use.
+change <code>hilbert.xslt</code> to the l-rule set you want to use.
 
 2. On the command line execute (for example):
 
@@ -39,8 +39,8 @@ Note: All of these options, except the first can be omitted. If omitted, the def
 * dragon.xslt - draws the dragon curve
 
 ## Supported drawing commands in L-Rule sets
-* <r/> turns the current direction 90° to the right
-* <l/> turns the current direction 90° to the left
-* <f/> draws a line in the current direction with one step length
+* <code>&\lt;r/&\gt;</code> turns the current direction 90° to the right
+* <code>&\lt;l/&\gt;</code> turns the current direction 90° to the left
+* <code>&\lt;f/&\gt;</code> draws a line in the current direction with one step length
 
 All other tags in l-rules are interpreted as variables (or constants).
