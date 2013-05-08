@@ -18,18 +18,18 @@ change <code>hilbert.xslt</code> to the l-rule set you want to use.
 
 2. On the command line execute (for example):
 
-$ saxon -xsl:lcurve.xslt -o:test.svg -it:main n=5 x=0 y=1024  width=1024 height=1024 direction=2 step=20
+<code>$ saxon -xsl:lcurve.xslt -o:test.svg -it:main n=5 x=0 y=1024  width=1024 height=1024 direction=2 step=20</code>
 
 where
 
-* -o:test.svg - defines the output SVG file
-* n=5 - sets the recursion depth to 5
-* x=0 - sets the starting point x coordinate to 0
-* y=1024 - sets the starting point y ordinates to 1024
-* width=1024 - sets the image width to 1024 pixels
-* height=1024 - sets the image height to 1024 pixels
-* direction=1 - sets the starting direction to east (0=north, 1=east, 2=south, 3=west)
-* step=20 - sets the length of a line in one drawing step to 20 pixels
+* <code>-o:test.svg</code> - defines the output SVG file
+* <code>n=5</code> - sets the recursion depth to 5
+* <code>x=0</code> - sets the starting point x coordinate to 0
+* <code>y=1024</code> - sets the starting point y ordinates to 1024
+* <code>width=1024</code> - sets the image width to 1024 pixels
+* <code>height=1024</code> - sets the image height to 1024 pixels
+* <code>direction=1</code> - sets the starting direction to east (0=north, 1=east, 2=south, 3=west)
+* <code>step=20</code> - sets the length of a line in one drawing step to 20 pixels
 
 Note: All of these options, except the first can be omitted. If omitted, the default value (which are the above ones) for that option is being used.
 
