@@ -1,6 +1,6 @@
 # lcurve
 
-This XSLT script generates SVG files for a given Lindenmayer-System.
+This XSLT script generates SVG files for a given [Lindenmayer-System](https://en.wikipedia.org/wiki/L-system).
 
 ***
 
@@ -15,7 +15,6 @@ This XSLT script generates SVG files for a given Lindenmayer-System.
 <code>&lt;xsl:import href="hilbert.xslt" /&gt; &lt;!-- import l-rule set here--&gt;</code>
 
 change <code>hilbert.xslt</code> to the l-rule set you want to use.
-
 2. On the command line execute (for example):
 
 <code>$ saxon -xsl:lcurve.xslt -o:test.svg -it:main n=5 x=0 y=1024  width=1024 height=1024 direction=2 step=20</code>
@@ -31,7 +30,7 @@ where
 * <code>direction=1</code> - sets the starting direction to east (0=north, 1=east, 2=south, 3=west)
 * <code>step=20</code> - sets the length of a line in one drawing step to 20 pixels
 
-Note: All of these options, except the first can be omitted. If omitted, the default value (which are the above ones) for that option is being used.
+*Note:* All of these options, except the first can be omitted. If omitted, the default value (which are the above ones) for that option is being used.
 
 # Defining L-Rule sets
 ## Example L-Rule sets within this repository
