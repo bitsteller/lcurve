@@ -16,6 +16,7 @@
 		</xsl:variable>
 		
 		<xsl:variable name="points"> <!--generate points from result string-->
+		        <xsl:value-of select="concat($x,',', $y, ' ')"/>
 			<xsl:apply-templates select="($result-string/*)[1]" mode="scan">
 				<xsl:with-param name="direction" select="1"/>
 				<xsl:with-param name="point"><x>512</x><y>512</y></xsl:with-param>
