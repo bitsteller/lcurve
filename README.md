@@ -11,9 +11,7 @@ This XSLT script generates SVG files for a given [Lindenmayer-System](https://en
 # Usage
 
 1. Open the file lcurve.xslt and in line 3, which states
-
 <code>&lt;xsl:import href="hilbert.xslt" /&gt; &lt;!-- import l-rule set here--&gt;</code>
-
 change <code>hilbert.xslt</code> to the l-rule set you want to use.
 2. On the command line execute (for example):
 
