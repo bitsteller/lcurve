@@ -15,7 +15,7 @@ This XSLT script generates SVG files for a given [Lindenmayer-System](https://en
 change <code>hilbert.xslt</code> to the l-rule set you want to use.
 2. On the command line execute (for example):
 
-<code>$ saxon -xsl:lcurve.xslt -o:test.svg -it:main n=5 x=0 y=1024  width=1024 height=1024 direction=2 step=20</code>
+<code>$ saxon -xsl:lcurve.xslt -o:test.svg -it:main n=5 x=0 y=1024  width=1024 height=1024 direction=1 step=20</code>
 
 where
 
